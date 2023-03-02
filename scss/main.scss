@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 652px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 5px;
+}
+.block {
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 2px #222222;
+  cursor: pointer;
+}
+.block-grey {
+  background-color: #7e7e7e;
+}
+.block-green {
+  background-color: #adff2f;
+}
+.block-yellow {
+  background-color: #ffff00;
+}
+.block-red {
+  background-color: #ff0000;
+}
+@media (min-width: 700px) {
+  .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas:
+      "item1 item2 item3"
+      ". item4 .";
+  }
+  .item1 {
+    grid-area: item1;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+}
